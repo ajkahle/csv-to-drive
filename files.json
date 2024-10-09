@@ -3,18 +3,18 @@
     "name":"all_ballot_returns_TO_EXCLUDE",
     "folder":"1gT-BlvSlKc2u-dTbb97p3RbZIZTLUEs_",
     "overwrite":true,
-    "query":"SELECT p.myv_van_id,p.first_name, p.last_name, p.voting_street_address, p.voting_street_address_2, p.voting_city, p.state_code, p.voting_zip, p.date_of_birth_combined, p.age_combined, p.gender_combined, p.primary_cell_number, p.primary_landline_number FROM `demsilunderwood22.vansync.contacts_absentees` ca LEFT JOIN `democrats.analytics_il.person` p ON ca.myv_van_id = p.myv_van_id WHERE ca.date_ballot_received IS NOT NULL AND p.us_cong_district_latest = '014'"
+    "query":""
   },
   {
     "name":"all_ballot_requests_TO_EXCLUDE",
     "folder":"1gT-BlvSlKc2u-dTbb97p3RbZIZTLUEs_",
     "overwrite":true,
-    "query":"SELECT p.myv_van_id,p.first_name, p.last_name, p.voting_street_address, p.voting_street_address_2, p.voting_city, p.state_code, p.voting_zip, p.date_of_birth_combined, p.age_combined, p.gender_combined, p.primary_cell_number, p.primary_landline_number FROM `demsilunderwood22.vansync.contacts_absentees` ca LEFT JOIN `democrats.analytics_il.person` p ON ca.myv_van_id = p.myv_van_id WHERE ca.date_request_received IS NOT NULL AND p.us_cong_district_latest = '014'"
+    "query":""
   },
   {
     "name":"ballot_chase_TO_INCLUDE",
     "folder":"1gT-BlvSlKc2u-dTbb97p3RbZIZTLUEs_",
     "overwrite":true,
-    "query":"SELECT p.myv_van_id,p.first_name, p.last_name, p.voting_street_address, p.voting_street_address_2, p.voting_city, p.state_code, p.voting_zip, p.date_of_birth_combined, p.age_combined, p.gender_combined, p.primary_cell_number, p.primary_landline_number FROM `demsilunderwood22.vansync.contacts_absentees` ca LEFT JOIN `democrats.analytics_il.person` p ON ca.myv_van_id = p.myv_van_id LEFT JOIN `democrats.scores_il.all_scores_2022` s ON s.person_id = p.person_id WHERE ca.date_request_received IS NOT NULL AND p.us_cong_district_latest = '014' AND s.dnc_2022_dem_party_support > .7"
+    "query":""
   }
 ]
